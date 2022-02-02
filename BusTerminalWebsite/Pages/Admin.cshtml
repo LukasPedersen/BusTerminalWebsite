@@ -1,0 +1,150 @@
+﻿@page
+@model ButTerminalWeb.Pages.ButTerminalPages.AdminModel
+@{
+    <link href="~/css/AdminStyling.css" rel="stylesheet" />
+}
+<div class="containerMain">
+
+    <div class="row adminHeader">
+        <div class="col-sm-2 col-lg-2 logo">logo</div>
+        <div class="col-sm-10 col-lg-10 menu">Menu</div>
+    </div>
+    <div class="row row-1" style="padding:10px; height:10vh">
+        <div class="col-sm-3 col-5 row-1-col-1" style="margin-left:auto; margin-right:auto; width:100%;">
+            Total busser:
+            @{
+                
+            }
+        </div>
+        <div class="col-sm-3 col-5 row-1-col-2" style="margin-left:auto; margin-right:auto; width:100%;">
+            Busser i brug %
+        </div>
+        <div class="col-sm-3 col-5 row-1-col-3" style="margin-left:auto; margin-right:auto; width:100%;">
+            Total ruter
+        </div>
+        <div class="col-sm-3 col-5 row-1-col-4" style="margin-left:auto; margin-right:auto; width:100%;">
+            Gemmensnit af busser per rute
+        </div>
+    </div>
+    <div class="row row-2" style="padding:10px;">
+        <div class="col-sm-8 col-10 row-2-col-1" style="margin-left: auto; margin-right: auto; width: 100%; padding: 10px; height: 75vh">
+            <div class="col-sm-10 col-12 row-1-col-2" style="margin-left: auto; margin-right: auto; width: 100%; height: 72vh">
+                @*Googel Map*@
+                <div class="Map col" id="map" style="height:72vh;"></div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9BOOxY9pSmfJN-M3VNqEtoeFwDUJpNaw&callback=initMap&v=weekly&channel=2"async></script>
+            </div>
+        </div>
+        <div class="col-sm-4 col-10 row-2-col-2" style="margin-left: auto; margin-right: auto; width: 100%; padding: 10px; height: 75vh">
+            Data til alle regioner
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6"></div>
+    </div>
+</div>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 54.9079961, lng: 9.8053493 },
+            zoom: 6,
+            mapTypeId: "terrain",
+        });
+        // Define the symbol, using one of the predefined paths ('CIRCLE')
+        // supplied by the Google Maps JavaScript API.
+        const lineSymbol = {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 8,
+            strokeColor: "#393",
+        };
+        // Create the polyline and add the symbol to it via the 'icons' property.
+        const line = new google.maps.Polyline({
+            path: [
+                { lat: 54.93108919297022, lng: 9.73367242535168 },
+                { lat: 54.93108919297022, lng: 9.73367242535168 },
+                { lat: 54.9309563, lng: 9.7335608 },
+                { lat: 54.93075210000001, lng: 9.733392700000001 },
+                { lat: 54.93075210000001, lng: 9.733392700000001 },
+                { lat: 54.930414999999996, lng: 9.733043 },
+                { lat: 54.930414999999996, lng: 9.733043 },
+                { lat: 54.930414999999996, lng: 9.733043 },
+                { lat: 54.9562933, lng: 9.697502100000001 },
+                { lat: 54.9562933, lng: 9.697502100000001 },
+                { lat: 54.9562933, lng: 9.697502100000001 },
+                { lat: 54.9562933, lng: 9.697502100000001 },
+                { lat: 54.956313400000006, lng: 9.6975093 },
+                { lat: 54.956333799999996, lng: 9.697513200000001 },
+                { lat: 54.95635420000001, lng: 9.6975137 },
+                { lat: 54.9563746, lng: 9.6975108 },
+                { lat: 54.9563948, lng: 9.6975046 },
+                { lat: 54.9564145, lng: 9.697494999999998 },
+                { lat: 54.956433600000004, lng: 9.697482100000002 },
+                { lat: 54.956451900000005, lng: 9.697466200000001 },
+                { lat: 54.9564693, lng: 9.697447300000002 },
+                { lat: 54.95648560000001, lng: 9.697425599999997 },
+                { lat: 54.9565135, lng: 9.697376199999997 },
+                { lat: 54.9565135, lng: 9.697376199999997 },
+                { lat: 54.95652210000001, lng: 9.697355 },
+                { lat: 54.9565336, lng: 9.697318100000002 },
+                { lat: 54.956544699999995, lng: 9.697258299999998 },
+                { lat: 54.956547799999996, lng: 9.6972167 },
+                { lat: 54.956547799999996, lng: 9.6972167 },
+                { lat: 54.9565459, lng: 9.697154000000001 },
+                { lat: 54.956536199999995, lng: 9.697093400000002 },
+                { lat: 54.9565256, lng: 9.697055699999998 },
+                { lat: 54.956504, lng: 9.697005200000001 },
+                { lat: 54.9564917, lng: 9.696984299999999 },
+                { lat: 54.9564917, lng: 9.696984299999999 },
+                { lat: 54.9564725, lng: 9.696950500000002 },
+                { lat: 54.95645069999999, lng: 9.696921999999997 },
+                { lat: 54.956426799999996, lng: 9.696899199999999 },
+                { lat: 54.956401299999996, lng: 9.6968827 },
+                { lat: 54.956401299999996, lng: 9.6968827 },
+                { lat: 54.956370799999995, lng: 9.696871999999999 },
+                { lat: 54.956339799999995, lng: 9.696870299999999 },
+                { lat: 54.956308899999996, lng: 9.696877599999999 },
+                { lat: 54.9562792, lng: 9.696893599999997 },
+                { lat: 54.9562515, lng: 9.696918000000002 },
+                { lat: 54.956226400000006, lng: 9.6969501 },
+                { lat: 54.9562047, lng: 9.696988999999999 },
+                { lat: 54.9561941, lng: 9.6970136 },
+                { lat: 54.9561941, lng: 9.6970136 },
+                { lat: 54.95614789999999, lng: 9.6969903 },
+                { lat: 54.9560222, lng: 9.696949199999997 },
+                { lat: 54.955928799999995, lng: 9.696951400000001 },
+                { lat: 54.955928799999995, lng: 9.696951400000001 },
+                { lat: 54.95454909999999, lng: 9.696179299999997 },
+                { lat: 54.95454909999999, lng: 9.696179299999997 },
+                { lat: 54.95454909999999, lng: 9.696179299999997 },
+                { lat: 54.954478699999996, lng: 9.6965021 },
+                { lat: 54.954478699999996, lng: 9.6965021 },
+                { lat: 54.954319899999994, lng: 9.697374799999999 },
+                { lat: 54.954319899999994, lng: 9.697374799999999 },
+                { lat: 54.954319899999994, lng: 9.697374799999999 },
+                { lat: 54.9547725, lng: 9.6976268 },
+                { lat: 54.954776793343335, lng: 9.69763092103222 },
+                { lat: 54.954776793343335, lng: 9.69763092103222 },
+            ],
+            icons: [
+                {
+                    icon: lineSymbol,
+                    offset: "100%",
+                },
+            ],
+            map: map,
+        });
+        animateCircle(line);
+    }
+
+    // Use the DOM setInterval() function to change the offset of the symbol
+    // at fixed intervals.
+    function animateCircle(line) {
+        let count = 0;
+        window.setInterval(() => {
+            count = (count + 1) % 200;
+            const icons = line.get("icons");
+            icons[0].offset = count / 2 + "%";
+            line.set("icons", icons);
+        }, 200);
+    }
+</script>

@@ -1,0 +1,65 @@
+﻿body{
+    margin:0;
+    padding:0;
+    overflow-y: visible !important;
+}
+.row{
+    margin:0;
+}
+
+/*#region Header*/
+.adminHeader{
+    width:100%;
+    height:60px;
+}
+.logo{
+    background-color:green;
+}
+.menu {
+    background-color: mediumvioletred;
+}
+/*#endregion Header*/
+/*#region Contents*/
+.containerMain {
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+/*Row 1 start*/
+.row-1 {
+    margin-top: 10px;
+    padding:10px;
+    height:10vh !important;
+}
+.row-1-col-1 {
+    background-color: greenyellow;
+}
+.row-1-col-2 {
+    background-color: green;
+}
+.row-1-col-3 {
+    background-color: orangered;
+}
+.row-1-col-4 {
+    background-color: red;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+/*Row 1 end*/
+
+/*Row 2 start*/
+.row-2 {
+    margin-top: 10px;
+    padding: 10px;
+}
+.row-2-col-1{
+    background-color:brown;
+}
+.row-2-col-2{
+    background-color:cornflowerblue;
+}
+/*Row 1 end*/
+/*#endregion Contents*/
