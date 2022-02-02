@@ -1,7 +1,7 @@
 ﻿
-namespace ButTerminalWeb
+namespace BusTerminalWebsite.UtilityLayer
 {
-    public class UtilityLayer
+    public class ClassContainer
     {
         public class RouteTypeDTOWeb
         {

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ButTerminalWeb.Pages.ButTerminalPages.GoogleApiPrototypes;
+using BusTerminalWebsite.UtilityLayer.GoogleApiPrototypes;
 using System.Net.Http;
 using System.Net.Http.Json;
 using Microsoft.Extensions.Configuration;
 using System.Threading;
 
-namespace ButTerminalWeb.Pages.ButTerminalPages
+namespace BusTerminalWebsite.Pages
 {
     public class AdminModel : PageModel
     {

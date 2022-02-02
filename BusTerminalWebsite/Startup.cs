@@ -29,6 +29,8 @@ namespace BusTerminalWebsite
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            Configuration.GetValue<string>("ConnectionStrings:URL");
+            Configuration.GetValue<string>("API_KEY:KEY");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
